@@ -11,23 +11,102 @@
 
 <title>Online Learner</title>
 <body>
-  <h1> <p class="text-center">  Online Learner </P> </h1> 
-  <form name="user" action="hello" method="post">
+  <h1> 
+    <p class="text-center">  Online Learner </P> 
+  </h1> 
+ <div class="album py-5 bg-light">
+    <div class="container">
+        <h3> 
+        <p class="text-left">  Meine Kurse </P> 
+        </h3>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <table class="table table-dark table-striped">
+                <tr>
+                    <th>Firstname</th>  <th>Lastname</th>
+                </tr>
+                <#list users as user>
+                <tr>
+                    <td>${user.firstname}</td> <td>${user.lastname}</td>
+                </tr>
+                </#list>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <table class="table table-dark table-striped">
+                <tr>
+                    <th>Firstname</th>  <th>Lastname</th>
+                </tr>
+                <#list users as user>
+                <tr>
+                    <td>${user.firstname}</td> <td>${user.lastname}</td>
+                </tr>
+                </#list>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <div class="album py-5 bg-light">
+    <div class="container">
+        <h3> 
+        <p class="text-left">  Verfügbare Kurse </P> 
+        </h3>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <table class="table table-dark table-striped">
+                <tr>
+                    <th>Firstname</th>  <th>Lastname</th>
+                </tr>
+                <#list users as user>
+                <tr>
+                    <td>${user.firstname}</td> <td>${user.lastname}</td>
+                </tr>
+                </#list>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <table class="table table-dark table-striped">
+                <tr>
+                    <th>Firstname</th>  <th>Lastname</th>
+                </tr>
+                <#list users as user>
+                <tr>
+                    <td>${user.firstname}</td> <td>${user.lastname}</td>
+                </tr>
+                </#list>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="position-relative">
+  <div class="position-absolute bottom-0 start-0">
+    <button type="button" class="btn btn-primary">Kurs Erstellen</button>
+  </div>
+</div>
+  <#--  <form name="user" action="hello" method="post">
     Firstname: <input type="text" name="firstname" /> <br/>
     Lastname: <input type="text" name="lastname" /> <br/>
     <input type="submit" value="Save" />
-  </form>
- 
-  <table class="table table-success table-striped">
-    <tr>
-        <th>Firstname</th>  <th>Lastname</th>
-    </tr>
-    <#list users as user>
-    <tr>
-        <td>${user.firstname}</td> <td>${user.lastname}</td>
-    </tr>
-    </#list>
-  </table>
+  </form>  -->
 
       <!-- Option 2: Separate Popper and Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
