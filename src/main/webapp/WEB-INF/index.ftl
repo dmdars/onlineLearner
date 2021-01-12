@@ -64,7 +64,7 @@
         <div class="col">
           <div class="card shadow-sm">
             <div class="card-body">
-              <table class="table table-dark table-striped">
+              <table class="table table-light table-striped">
                 <tr>
                     <th>Firstname</th>  <th>Lastname</th>
                 </tr>
