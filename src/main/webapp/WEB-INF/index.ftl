@@ -1,116 +1,119 @@
-<html>
-<head>
+<!DOCTYPE html>
+<head><title>view_main</title>
+    <style type="text/css">
+        * {
+            margin:0;
+            padding:0;
+        }
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        body{
+            text-align:center;
+            background: #efe4bf none repeat scroll 0 0;
+        }
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        .wrapper{
+            width:960px;
+            margin:0 auto;
+            text-align:left;
+            background-color: #fff;
+            border-radius: 0 0 10px 10px;
+            padding: 20px;
+            box-shadow: 1px -2px 14px rgba(0, 0, 0, 0.4);
+        }
+
+        #header{
+            color: #fff;
+            background-color: #2c5b9c;
+            height: 3.5em;
+            padding: 1em 0em 1em 1em;
+
+        }
+
+        #site{
+            background-color: #fff;
+            padding: 20px 0px 0px 0px;
+        }
+        #Pbutton{
+            background-color: white;
+            padding: 25px 0px 50px 0px;   /*für Button, 50px Abstand/Länge von unten*/
+        }
+        #OProjekte{
+            background-color: grey;
+            padding: 250px 0px 0px 0px;   /*für Offene Projekte Bereich*/
+        }
+        .Abstand{
+            background-color: white;
+            padding: 40px 0px 40px 0px;    /*Abstand zwischen AProjekte und OProjekte */
+        }
+        #AProjekte{
+            background-color: grey;
+            padding: 250px 0px 0px 0px;   /*für Abgeschlossene Projekte Bereich*/
+        }
+         .button{
+            border: none;
+            outline: none;
+            height: 25px;
+            line-height: 20px;
+            width: 200px;          /*Breite des Buttons*/
+            background: #2c5b9c;  /* Farbe des Hintergunds des Buttons*/
+            color: white;         /*Farbe der Eingabeschrift*/
+            font-size: 17px;
+            border-radius: 15px; /*macht Ränder des Buttons rund*/
+            /* margin-right: 100px;*/
+         }
+         .button:hover{
+             background: lightcoral;
+             color: darkblue;
+         }
+
+         #Ebutton{
+                /* funktioniert in input-Bereich !!!*/
+             padding: 0px 0px 25px 0px;  /*damit ein Abstand nach unten vorhanden ist*/
+
+         }
 
 
-<title>Online Learner</title>
+        .centerBlock{
+            margin:0 auto;
+        }
+    </style>
+
 <body>
-  <h1> 
-    <p class="text-center">  Online Learner </P> 
-  </h1> 
- <div class="album py-5 bg-light">
-    <div class="container">
-        <h3> 
-        <p class="text-left">  Meine Kurse </P> 
-        </h3>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <table class="table table-dark table-striped">
-                <tr>
-                    <th>Firstname</th>  <th>Lastname</th>
-                </tr>
-                <#list users as user>
-                <tr>
-                    <td>${user.firstname}</td> <td>${user.lastname}</td>
-                </tr>
-                </#list>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <table class="table table-dark table-striped">
-                <tr>
-                    <th>Firstname</th>  <th>Lastname</th>
-                </tr>
-                <#list users as user>
-                <tr>
-                    <td>${user.firstname}</td> <td>${user.lastname}</td>
-                </tr>
-                </#list>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="wrapper">
+    <div id="header">
+        <h1> ProjectFunder Website </h1>
     </div>
-  </div>
- <div class="album py-5 bg-light">
-    <div class="container">
-        <h3> 
-        <p class="text-left">  Verfügbare Kurse </P> 
-        </h3>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <table class="table table-light table-striped">
-                <tr>
-                    <th>Firstname</th>  <th>Lastname</th>
-                </tr>
-                <#list users as user>
-                <tr>
-                    <td>${user.firstname}</td> <td>${user.lastname}</td>
-                </tr>
-                </#list>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <table class="table table-dark table-striped">
-                <tr>
-                    <th>Firstname</th>  <th>Lastname</th>
-                </tr>
-                <#list users as user>
-                <tr>
-                    <td>${user.firstname}</td> <td>${user.lastname}</td>
-                </tr>
-                </#list>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-<div class="position-relative">
-  <div class="position-absolute bottom-0 start-0">
-    <button type="button" class="btn btn-primary">Kurs Erstellen</button>
-  </div>
+    <div id = "Pbutton">
+   <a href = viewProject><input class="button" type ="button" name="" value = "Profil"></a>
+    </div>
+
+    <h1>Offene Projekte</h1><br>
+    <#if linko??>
+      ${linko}
+    <#else>
+    </#if>
+  
+    </div>
+
+    <p class = Abstand> </p>
+
+    <h1>Abgeschlossene Projekte</h1><br>
+ 
+ <#if linkc??>
+      ${linkc}
+    <#else>
+    </#if>
+    </div>
+
+ 
+
+    <div style = "float:right;" id ="Ebutton">
+        <a href = "newProject"><input class="button" type ="button" name="" value = "Projekt erstellen"><a>
+    </div><br>
+
+
+
 </div>
-  <#--  <form name="user" action="hello" method="post">
-    Firstname: <input type="text" name="firstname" /> <br/>
-    Lastname: <input type="text" name="lastname" /> <br/>
-    <input type="submit" value="Save" />
-  </form>  -->
-
-      <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-
 </body>
 </html>

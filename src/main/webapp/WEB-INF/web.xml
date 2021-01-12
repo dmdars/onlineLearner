@@ -49,13 +49,13 @@
 	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>hello_servlet</servlet-name>
-		<servlet-class>de.unidue.inf.is.HelloServlet</servlet-class>
+		<servlet-name>view_mainServlet</servlet-name>
+		<servlet-class>de.unidue.inf.is.view_mainServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>hello_servlet</servlet-name>
-		<url-pattern>/hello</url-pattern>
+		<servlet-name>view_mainServlet</servlet-name>
+		<url-pattern>/view_main</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
@@ -67,15 +67,15 @@
 		<servlet-name>onlineLearner_servlet</servlet-name>
 		<url-pattern>/onlineLearner</url-pattern>
 	</servlet-mapping>
-
+	
 	<servlet>
-	<servlet-name>new_course</servlet-name>
-	<servlet-class>de.unidue.inf.is.new_course</servlet-class>
+		<servlet-name>new_course</servlet-name>
+		<servlet-class>de.unidue.inf.is.new_course</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-	<servlet-name>new_course</servlet-name>
-	<url-pattern>/new_course</url-pattern>
+		<servlet-name>new_course</servlet-name>
+		<url-pattern>/new_course</url-pattern>
 	</servlet-mapping>
 
 	<!-- Prevent the visiting of MVC Views from outside the servlet container. 
