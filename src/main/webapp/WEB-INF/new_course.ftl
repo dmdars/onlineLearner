@@ -21,7 +21,7 @@
         #Überschrift
         {
             text-align: center;
-            color: white;
+            color: black;
         }
 
         .wrapper
