@@ -69,12 +69,12 @@
 	</servlet-mapping>
 
 	<servlet>
-	<servlet-name>new_course</servlet-name>
-	<servlet-class>de.unidue.inf.is.new_course</servlet-class>
+	<servlet-name>new_courseServlet</servlet-name>
+	<servlet-class>de.unidue.inf.is.new_courseServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-	<servlet-name>new_course</servlet-name>
+	<servlet-name>new_courseServlet</servlet-name>
 	<url-pattern>/new_course</url-pattern>
 	</servlet-mapping>
 
