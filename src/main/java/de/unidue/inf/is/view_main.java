@@ -16,7 +16,7 @@ import de.unidue.inf.is.domain.User;
 /**
  * Einfaches Beispiel, das die Vewendung der Template-Engine zeigt.
  */
-public final class HelloServlet extends HttpServlet {
+public final class view_main extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
@@ -37,7 +37,7 @@ public final class HelloServlet extends HttpServlet {
         // Put the user list in request and let freemarker paint it.
         request.setAttribute("users", userList);
 
-        request.getRequestDispatcher("/index.ftl").forward(request, response);
+        request.getRequestDispatcher("/view_main.ftl").forward(request, response);
     }
 
 
