@@ -68,6 +68,16 @@
 		<url-pattern>/onlineLearner</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+	<servlet-name>new_course</servlet-name>
+	<servlet-class>de.unidue.inf.is.new_course</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>new_course</servlet-name>
+	<url-pattern>/new_course</url-pattern>
+	</servlet-mapping>
+
 	<!-- Prevent the visiting of MVC Views from outside the servlet container. 
 		RequestDispatcher.forward/include should and will still work. Removing this 
 		may open security holes! -->
