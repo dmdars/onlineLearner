@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-public class new_course extends HttpServlet {
+public class new_courseServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     @Override
