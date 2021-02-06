@@ -21,16 +21,16 @@
         #Überschrift
         {
             text-align: center;
-            color: black;
+            color: white;
         }
 
         .wrapper
         {
-            width:960px;
+            width:800px;
             margin:0 auto;
             text-align:left;
             background-color: #fff;
-            border-radius: 0 0 10px 10px;
+            border-radius: 0 0 0 10px;
             padding: 20px;
             box-shadow: 1px -2px 14px rgba(0, 0, 0, 0.4);
         }
@@ -58,12 +58,12 @@
         
         .wrapper #Rückung1
         {
-            text-indent: 292px;        /*Texteinrückung in die Mitte*/
+            text-indent: 280px;        /*Texteinrückung in die Mitte*/
         }
 
         .wrapper #Rückung2
         {
-            text-indent: 150px;        /*Texteinrückung in die Mitte*/
+            text-indent: 130px;        /*Texteinrückung in die Mitte*/
         }
 
         .wrapper #Rückung3
@@ -73,7 +73,7 @@
 
         .wrapper #Rückung4
         {
-            text-indent: 160px;        /*Texteinrückung in die Mitte*/
+            text-indent: 150px;        /*Texteinrückung in die Mitte*/
         }
 
         #header
@@ -145,7 +145,7 @@
 
             function myFunction2()
             {
-                const FP = document.getElementById('freierPl');
+                const FP = document.getElementById('freiePl');
                 const N = document.getElementById('KName');
                 const ErrorN = document.getElementById('errorN');
                 const ErrorFP = document.getElementById('errorFP');
@@ -162,14 +162,15 @@
                     ErrorFP.innerHTML = "Der Wert ist größer als 100";
                 }
 
-                if(N.value.length < 50 && E.value < 100) //nur value für V und K funktioniert nicht
+                <#--  if(N.value.length < 50 && E.value < 100) //nur value für V und K funktioniert nicht
                 {    
                     window.open("onlineLearner_start.html");
-                }
+                }  -->
             }
+}
         </script>
 
-        <form id = "form" action ="view_main"  method="GET">
+        <form id = "form" name="new_course_form" method="POST">
             <div class="wrapper">
                 <div id="header">
                     <h1> Online Learner </h1>
@@ -183,7 +184,7 @@
                     <tr>
                         <th> <h2 id = "Rückung1"> Name </h2> </th>
                         <td class = "Leerzeile">
-                            <input id = "KName" type = "text" name ="" Placeholder ="Name des Kurs">
+                            <input id = "KName" type = "text" name ="name" Placeholder ="Name des Kurs">
                             <p id = "errorN">  </p>
                         </td>
                     </tr>
@@ -193,9 +194,9 @@
 
                 <table>
                     <tr>
-                        <th> <h2 id = "Rückung2"> Einschreibschlüssel </h2></th>
+                        <th> <h2 id = "Rückung2"> Einschreibeschlüssel </h2></th>
                         <td class = "Leerzeile">
-                            <input id = "Einschreibschlüssel" type ="text"  name ="" Placeholder ="Einschreibschlüssel">
+                            <input id = "Einschreibeschlüssel" type ="text"  name ="einschreibeschluessel"  Placeholder ="Einschreibeschlüssel">
                             <p id = "errorE">  </p>
                         </td>
                     </tr>
@@ -205,9 +206,9 @@
 
                 <table>
                     <tr>
-                        <th> <h2 id = "Rückung3"> Anz. freier Plätze </h2></th>
+                        <th> <h2 id = "Rückung3"> Anz. freie Plätze </h2></th>
                         <td class = "Leerzeile">
-                            <input type="number" id="freierPl" name="freierPl">
+                            <input type="number" id="freiePl" min="0" Placeholder ="0" name="freiePlaetze">
                         </td>
                     </tr>
                 </table>
@@ -219,7 +220,7 @@
                     <tr>
                         <th> <h2 id = "Rückung4"> Beschreibungstext </h2></th>
                         <td class = "Leerzeile">
-                            <textarea id = "Beschreibung" rows = '4' cols = "50" Placeholder = "Beschreibung"></textarea>
+                            <textarea id = "Beschreibung" rows = '4' cols = "50" name="beschreibungstext" Placeholder = "Beschreibung"></textarea>
                         </td>
                     </tr>
                 </table>
@@ -227,7 +228,7 @@
                 <p class = "Abstand3"></p>
 
                 <div style = "float:right;" id ="Ebutton" >
-                    <a href = "newProject"><button class="button" type ="submit" name="" onclick="myFunction2()">Erstellen</button><a>
+                    <a href = "newKurs"><button class="button" type ="submit" name="">Erstellen</button><a>
                 </div><br>
             </div>
         </form>
